@@ -7,7 +7,9 @@ image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2GRAY)
 template = cv2.imread('input/image_1_template.jpg', 0)
 w, h = template.shape[::-1]
 
+
 result = cv2.matchTemplate(image_copy, template, cv2.TM_CCOEFF_NORMED)
+cv2.imwrite('outputs/matchTemplate.jpg', result)
 min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
 
 x1, y1 = max_loc
