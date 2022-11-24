@@ -1,10 +1,10 @@
 import cv2
 
-image = cv2.imread('input/image_1.jpg')
+image = cv2.imread('input/image_6.jpg')
 image_copy = image.copy()
 image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2GRAY)
 
-template = cv2.imread('input/image_1_template.jpg', 0)
+template = cv2.imread('input/image_6_template.jpg', 0)
 w, h = template.shape[::-1]
 
 
@@ -21,5 +21,5 @@ cv2.imshow('Result', image)
 cv2.normalize(result, result, 0, 1, cv2.NORM_MINMAX, -1 )
 #cv2.imshow('Detected point', result)
 cv2.waitKey(0)
-cv2.imwrite('outputs/image_result.jpg', image)
+cv2.imwrite('outputs/image_result6.jpg', image)
 #cv2.imwrite('outputs/template_result.jpg')

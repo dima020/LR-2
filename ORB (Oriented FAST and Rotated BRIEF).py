@@ -2,8 +2,8 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-image = cv2.imread('input/image_3.jpg', cv2.IMREAD_GRAYSCALE)
-template = cv2.imread('input/image_3_template.jpg',cv2.IMREAD_GRAYSCALE) # trainImage
+image = cv2.imread('input/image_6.jpg', cv2.IMREAD_GRAYSCALE)
+template = cv2.imread('input/image_6_template.jpg',cv2.IMREAD_GRAYSCALE) # trainImage
 
 titles = ["original", "template"]
 images = [image,template]
@@ -85,7 +85,7 @@ if right_bottom[1] == image.shape[0]:
 # Рисуем рамку
 result = image.copy()
 cv2.rectangle(result, left_top, right_bottom, 255, 10)
-cv2.imwrite('outputs/resultorb.jpg', result)
+cv2.imwrite('outputs/resultorb6.jpg', result)
 
 # Вывод mathplotlib
 plt.imshow(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
